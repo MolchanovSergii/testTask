@@ -46,3 +46,17 @@ export async function addProduct(data) {
         console.log(error.message);
     }
 }
+
+export async function deleteProduct(id) {
+    try {
+      const response = await apiInstance.delete(`/products/${id}`);
+      console.log(response);
+
+        alert(`SUCCESS delete: ${response.data.title}`);
+        return response.data;
+        
+    } catch (error) {
+        alert(error);
+      console.log(error);
+    }
+}
