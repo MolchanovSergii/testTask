@@ -10,4 +10,15 @@ export function createProductsListMarkup(arr) {
     `).join(''); 
 }
 
+
+
+export function createProductMarkup(data) {
+  console.log(data);
+  const {title, price, description} = data
+  return `<h2>${title}</h2>
+        <p>${price}</p>
+        <p>${description}</p>`
+    
+}
+
     
